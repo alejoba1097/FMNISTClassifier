@@ -192,7 +192,7 @@ def main():
 
             # Implement chekpointing
             if epoch % 5 == 0:
-                checkpoint_path = f".mlflow/checkpoint_epoch_{epoch}.pth"
+                checkpoint_path = f"mlflow/checkpoint_epoch_{epoch}.pth"
                 torch.save(model.state_dict(), checkpoint_path)
                 mlflow.log_artifact(checkpoint_path)
                 os.remove(checkpoint_path)

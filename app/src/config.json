@@ -1,7 +1,7 @@
 {
     "mlflow": {
         "remote_server_uri": "http://localhost:5000",
-        "model_uri": "runs:/f95bfdebb19d47fea3b12f18d25d1f17/model"
+        "model_uri": "runs:/0949ee5c79e54cc3b89d445ec70d2b25/model"
     },
     "labels_map": {
         "0": "T-Shirt",

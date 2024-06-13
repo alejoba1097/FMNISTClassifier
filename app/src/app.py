@@ -26,6 +26,8 @@ def get_model() -> nn.Module:
     remote_server_uri, model_uri = config["mlflow"].values()
     mlflow.set_tracking_uri(remote_server_uri)
 
+    print(model_uri)
+
     # Load model and set status to evaluating
     model = mlflow.pytorch.load_model(model_uri)
     model.eval()
@@ -36,11 +38,11 @@ def get_model() -> nn.Module:
     return model, labels_map
 
 
-# Initialize FastAPI app
-fmnist_app = FastAPI()
-
 # Initialize model and labels map
 model, labels_map = get_model()
+
+# Initialize FastAPI app
+fmnist_app = FastAPI()
 
 
 @fmnist_app.post("/predict")
