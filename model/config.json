@@ -1,0 +1,15 @@
+{
+    "training": {
+        "learning_rate": 0.001,
+        "batch_size": 64,
+        "max_epochs": 10,
+        "train_validation_split" : 0.9
+    },
+    "test" : {
+        "model_uri" : "runs:/f95bfdebb19d47fea3b12f18d25d1f17/model"
+    },
+    "mlflow": {
+        "remote_server_uri": "http://localhost:5000",
+        "experiment_name": "Fashion-MNIST Classifier"
+    }
+}
